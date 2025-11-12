@@ -1,0 +1,23 @@
+﻿[project]
+name = "cvai-turbo-backend"
+version = "0.1.0"
+description = "FastAPI backend for CVAI Turbo (students' cover letter generator)"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "pydantic>=2.7.0",
+  "python-dotenv>=1.0.1",
+  "httpx>=0.27.0"
+  # Legg til senere når Supabase aktiveres:
+  # "SQLAlchemy>=2.0.30",
+  # "alembic>=1.13.2",
+  # "psycopg[binary]>=3.1.19",
+  # "supabase>=2.5.0"
+]
+
+[tool.uvicorn]
+factory = false
+host = "127.0.0.1"
+port = 8000
+reload = true
